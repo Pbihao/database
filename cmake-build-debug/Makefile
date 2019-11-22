@@ -123,6 +123,19 @@ database/fast:
 	$(MAKE) -f CMakeFiles/database.dir/build.make CMakeFiles/database.dir/build
 .PHONY : database/fast
 
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +163,66 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/database.dir/build.make CMakeFiles/database.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/algorithm/sort_times.o: src/algorithm/sort_times.cpp.o
+
+.PHONY : src/algorithm/sort_times.o
+
+# target to build an object file
+src/algorithm/sort_times.cpp.o:
+	$(MAKE) -f CMakeFiles/database.dir/build.make CMakeFiles/database.dir/src/algorithm/sort_times.cpp.o
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/algorithm/sort_times.cpp.o
+.PHONY : src/algorithm/sort_times.cpp.o
+
+src/algorithm/sort_times.i: src/algorithm/sort_times.cpp.i
+
+.PHONY : src/algorithm/sort_times.i
+
+# target to preprocess a source file
+src/algorithm/sort_times.cpp.i:
+	$(MAKE) -f CMakeFiles/database.dir/build.make CMakeFiles/database.dir/src/algorithm/sort_times.cpp.i
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/algorithm/sort_times.cpp.i
+.PHONY : src/algorithm/sort_times.cpp.i
+
+src/algorithm/sort_times.s: src/algorithm/sort_times.cpp.s
+
+.PHONY : src/algorithm/sort_times.s
+
+# target to generate assembly for a file
+src/algorithm/sort_times.cpp.s:
+	$(MAKE) -f CMakeFiles/database.dir/build.make CMakeFiles/database.dir/src/algorithm/sort_times.cpp.s
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/algorithm/sort_times.cpp.s
+.PHONY : src/algorithm/sort_times.cpp.s
+
+test.o: test.cpp.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) -f CMakeFiles/database.dir/build.make CMakeFiles/database.dir/test.cpp.o
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) -f CMakeFiles/database.dir/build.make CMakeFiles/database.dir/test.cpp.i
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) -f CMakeFiles/database.dir/build.make CMakeFiles/database.dir/test.cpp.s
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -157,11 +230,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... database"
 	@echo "... edit_cache"
+	@echo "... database"
+	@echo "... test"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/algorithm/sort_times.o"
+	@echo "... src/algorithm/sort_times.i"
+	@echo "... src/algorithm/sort_times.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

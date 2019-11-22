@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pbihao/CLionProjects/database/src/DB/DB.h
+string
+-
+vector
+-
+book.h
+/home/pbihao/CLionProjects/database/src/DB/book.h
+
+/home/pbihao/CLionProjects/database/src/DB/book.h
+string
+-
+
+/home/pbihao/CLionProjects/database/src/algorithm/sort_times.h
+../DB/DB.h
+/home/pbihao/CLionProjects/database/src/DB/DB.h
+
+/home/pbihao/CLionProjects/database/test.cpp
+src/DB/DB.h
+/home/pbihao/CLionProjects/database/src/DB/DB.h
+src/algorithm/sort_times.h
+/home/pbihao/CLionProjects/database/src/algorithm/sort_times.h
+string
+-
+cstdio
+-
+
