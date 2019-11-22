@@ -137,6 +137,9 @@
 			<Option target="database"/>
 			<Option target="test"/>
 		</Unit>
+		<Unit filename="/home/pbihao/CLionProjects/database/src/DB/binary_tree.h">
+			<Option target="database"/>
+		</Unit>
 		<Unit filename="/home/pbihao/CLionProjects/database/src/DB/book.h">
 			<Option target="database"/>
 			<Option target="test"/>
@@ -150,7 +153,6 @@
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="/home/pbihao/CLionProjects/database/test.cpp">
-			<Option target="database"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="/home/pbihao/CLionProjects/database/CMakeLists.txt">

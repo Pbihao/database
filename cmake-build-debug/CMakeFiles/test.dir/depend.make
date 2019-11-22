@@ -6,8 +6,7 @@ CMakeFiles/test.dir/src/algorithm/sort_times.cpp.o: ../src/DB/book.h
 CMakeFiles/test.dir/src/algorithm/sort_times.cpp.o: ../src/algorithm/sort_times.cpp
 CMakeFiles/test.dir/src/algorithm/sort_times.cpp.o: ../src/algorithm/sort_times.h
 
-CMakeFiles/test.dir/test.cpp.o: ../src/DB/DB.h
+CMakeFiles/test.dir/test.cpp.o: ../src/DB/binary_tree.h
 CMakeFiles/test.dir/test.cpp.o: ../src/DB/book.h
-CMakeFiles/test.dir/test.cpp.o: ../src/algorithm/sort_times.h
 CMakeFiles/test.dir/test.cpp.o: ../test.cpp
 

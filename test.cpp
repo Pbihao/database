@@ -1,26 +1,42 @@
 //
 // Created by pbihao on 11/23/19.
 //
-#include "src/DB/DB.h"
-#include "src/algorithm/sort_times.h"
+#include "src/DB/book.h"
+#include "src/DB/binary_tree.h"
+
 #include <string>
 #include <cstdio>
 using namespace std;
-string ep = "a";
+Book a[10];
+Binary_tree T;
+vector<Book>arry;
 
 int main(){
-    DB db;
-    db.arry.emplace_back(0,ep,ep,3);
-    db.arry.emplace_back(0,ep,ep,2);
-    db.arry.emplace_back(0,ep,ep,33);
-    db.arry.emplace_back(0,ep,ep,34);
-    db.arry.emplace_back(0,ep,ep,23);
-    db.arry.emplace_back(0,ep,ep,90);
-    db.arry.emplace_back(0,ep,ep,1);
-
-    sort_times(&db);
-    for(const auto& x:db.arry){
-        printf("%d\n", x.borrowing_times);
+    for(int i = 0 ; i < 5; i++){
+        a[i] = Book(i);
+        T.insert(a[i]);
+    }
+    int num, x, y;
+    while(true){
+        scanf("%d", &num);
+        if(num == 0){
+            scanf("%d", &x);
+            printf("%d\n", T.query(x).get_ID());
+        }else if(num == 1){
+            scanf("%d", &x);
+            T.erase(x);
+        }else if(num == 2){
+            scanf("%d", &x);
+            T.insert(Book(x));
+        }else if(num == 3){
+            scanf("%d", &x);
+            T.replace(x, Book(x));
+        }else if(num == 4){
+            T.run(arry);
+            for( auto& y: arry){
+                printf("%d\n", y.get_ID());
+            }
+        }
     }
     return 0;
 }

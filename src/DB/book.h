@@ -10,6 +10,7 @@
 #define EDIT_BOOK 1
 #define DEL_BOOK 2
 #define DONT_CHANGE 3
+#define ERROR -1
 using namespace std;
 
 class Book {
@@ -22,6 +23,7 @@ public:
     int borrowing_times;
 
     Book(){}
+    Book(int id):ID(id){}//当一本书的ID为-1时代表这是一个错误类
     Book(int id, string Name, string Author, int Borrowing_times){
         ID = id;
         name = Name;
