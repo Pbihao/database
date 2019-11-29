@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/database.dir/main.cpp.o"
-  "CMakeFiles/database.dir/src/algorithm/sort_times.cpp.o"
+  "CMakeFiles/database.dir/src/indexes/search.cpp.o"
   "database.pdb"
   "database"
 )

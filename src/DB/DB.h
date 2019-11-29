@@ -8,12 +8,16 @@
 #include <string>
 #include <vector>
 #include "book.h"
+#include "binary_tree.h"
+#include "../indexes/search.h"
 using namespace std;
 
 class DB {
 public:
     int size;
     vector<Book> arry;
+    Binary_tree binaryTree;
+    Search_engine searchEngine;
     //读入数据库里面所有的书籍信息
     void read_books(){
         return;

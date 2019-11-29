@@ -31,7 +31,9 @@ public:
         borrowing_times = Borrowing_times;
         state = NEW_BOOK;
     }
-
+    void set_ID(int x){
+        this->ID = x;
+    }
     int get_ID(){
         return ID;
     }

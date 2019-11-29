@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/database.dir/main.cpp.o CMakeFiles/database.dir/src/algorithm/sort_times.cpp.o  -o database 
+/usr/bin/c++  -g   CMakeFiles/database.dir/main.cpp.o CMakeFiles/database.dir/src/indexes/search.cpp.o  -o database 

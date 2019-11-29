@@ -2,9 +2,18 @@
 // Created by pbihao on 11/23/19.
 //
 
-#include "sort_times.h"
+#ifndef DATABASE_SORT_TIMES_H
+#define DATABASE_SORT_TIMES_H
 
-bool cmp(const Book& a, const Book& b){
+#include "../DB/DB.h"
+/**
+ * 传入一个数据库的类，将数据库类中的所有的图书按照被借阅的次数从大到小
+ * 从大到小地进行排序
+ * @param database
+ */
+void sort_times(DB* database);
+
+bool cmp_sort_times_h(const Book& a, const Book& b){
     return a.borrowing_times > b.borrowing_times;
 }
 
@@ -18,7 +27,7 @@ struct Heap{
         int u = size;
         bool not_be_root = true;
         while (not_be_root && u != 1){
-            if(cmp(T[u], T[u >> 1])){
+            if(cmp_sort_times_h(T[u], T[u >> 1])){
                 swap(T[u], T[u >> 1]);
                 u = u >> 1;
             }else not_be_root = false;
@@ -32,10 +41,10 @@ struct Heap{
         size--;
         bool ok = true;
         while(ok && u << 1 <= size){
-            if((u<<1|1) <= size && cmp(T[u<<1|1], T[u]) && cmp(T[u<<1|1],T[u<<1])){
+            if((u<<1|1) <= size && cmp_sort_times_h(T[u<<1|1], T[u]) && cmp_sort_times_h(T[u<<1|1],T[u<<1])){
                 swap(T[u<<1|1],T[u]);
                 u = u << 1 | 1;
-            }else if(cmp(T[u<<1], T[u])){
+            }else if(cmp_sort_times_h(T[u<<1], T[u])){
                 swap(T[u<<1], T[u]);
                 u = u << 1;
             }else ok = false;
@@ -57,3 +66,5 @@ void sort_times(DB* database){
         database->arry.push_back(heap.pop());
     }
 }
+
+#endif //DATABASE_SORT_TIMES_H
