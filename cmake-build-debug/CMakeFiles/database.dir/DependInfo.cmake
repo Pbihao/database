@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pbihao/CLionProjects/database/main.cpp" "/home/pbihao/CLionProjects/database/cmake-build-debug/CMakeFiles/database.dir/main.cpp.o"
-  "/home/pbihao/CLionProjects/database/src/indexes/search.cpp" "/home/pbihao/CLionProjects/database/cmake-build-debug/CMakeFiles/database.dir/src/indexes/search.cpp.o"
+  "/Users/DWL/Desktop/projects/database-test/main.cpp" "/Users/DWL/Desktop/projects/database-test/cmake-build-debug/CMakeFiles/database.dir/main.cpp.o"
+  "/Users/DWL/Desktop/projects/database-test/src/indexes/search.cpp" "/Users/DWL/Desktop/projects/database-test/cmake-build-debug/CMakeFiles/database.dir/src/indexes/search.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

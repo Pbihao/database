@@ -38,9 +38,15 @@ public:
         return ID;
     }
 
+    int get_state(){
+        return state;
+    }
+
     string get_name(){
         return name;
     }
+
+
     void set_name(string Name){
         state = EDIT_BOOK;
         name = Name;
@@ -64,6 +70,10 @@ public:
 
     void del_book(){
         state = DEL_BOOK;
+    }
+
+    void set_book(){
+        state = NEW_BOOK;
     }
 };
 

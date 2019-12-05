@@ -1,4 +1,4 @@
-/home/pbihao/clion-2019.2.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/pbihao/CLionProjects/database
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/DWL/Desktop/projects/database-test
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/pbihao/CLionProjects/database/cmake-build-debug
+-- Build files have been written to: /Users/DWL/Desktop/projects/database-test/cmake-build-debug
