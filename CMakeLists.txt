@@ -10,4 +10,6 @@ add_executable(database
         src/DB/DB.h
         src/DB/binary_tree.h
         src/indexes/search.h
-        src/indexes/search.cpp)
+        src/indexes/search.cpp
+        src/cache/pool.h
+        src/DB/temp.h)

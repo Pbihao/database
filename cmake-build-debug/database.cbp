@@ -96,7 +96,13 @@
 		<Unit filename="/home/pbihao/CLionProjects/database/src/DB/book.h">
 			<Option target="database"/>
 		</Unit>
+		<Unit filename="/home/pbihao/CLionProjects/database/src/DB/temp.h">
+			<Option target="database"/>
+		</Unit>
 		<Unit filename="/home/pbihao/CLionProjects/database/src/algor/sort_times.h">
+			<Option target="database"/>
+		</Unit>
+		<Unit filename="/home/pbihao/CLionProjects/database/src/cache/pool.h">
 			<Option target="database"/>
 		</Unit>
 		<Unit filename="/home/pbihao/CLionProjects/database/src/indexes/search.cpp">
