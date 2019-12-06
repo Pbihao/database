@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/pbihao/clion-2019.2.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/pbihao/clion-2019.2.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/DWL/Desktop/projects/database
+CMAKE_SOURCE_DIR = /home/pbihao/CLionProjects/database
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/DWL/Desktop/projects/database/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pbihao/CLionProjects/database/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/database.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/database.dir/flags.make
 
 CMakeFiles/database.dir/main.cpp.o: CMakeFiles/database.dir/flags.make
 CMakeFiles/database.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/DWL/Desktop/projects/database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/database.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/database.dir/main.cpp.o -c /Users/DWL/Desktop/projects/database/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pbihao/CLionProjects/database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/database.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/database.dir/main.cpp.o -c /home/pbihao/CLionProjects/database/main.cpp
 
 CMakeFiles/database.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/database.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/DWL/Desktop/projects/database/main.cpp > CMakeFiles/database.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pbihao/CLionProjects/database/main.cpp > CMakeFiles/database.dir/main.cpp.i
 
 CMakeFiles/database.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/database.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/DWL/Desktop/projects/database/main.cpp -o CMakeFiles/database.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pbihao/CLionProjects/database/main.cpp -o CMakeFiles/database.dir/main.cpp.s
 
 CMakeFiles/database.dir/src/indexes/search.cpp.o: CMakeFiles/database.dir/flags.make
 CMakeFiles/database.dir/src/indexes/search.cpp.o: ../src/indexes/search.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/DWL/Desktop/projects/database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/database.dir/src/indexes/search.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/database.dir/src/indexes/search.cpp.o -c /Users/DWL/Desktop/projects/database/src/indexes/search.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pbihao/CLionProjects/database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/database.dir/src/indexes/search.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/database.dir/src/indexes/search.cpp.o -c /home/pbihao/CLionProjects/database/src/indexes/search.cpp
 
 CMakeFiles/database.dir/src/indexes/search.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/database.dir/src/indexes/search.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/DWL/Desktop/projects/database/src/indexes/search.cpp > CMakeFiles/database.dir/src/indexes/search.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pbihao/CLionProjects/database/src/indexes/search.cpp > CMakeFiles/database.dir/src/indexes/search.cpp.i
 
 CMakeFiles/database.dir/src/indexes/search.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/database.dir/src/indexes/search.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/DWL/Desktop/projects/database/src/indexes/search.cpp -o CMakeFiles/database.dir/src/indexes/search.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pbihao/CLionProjects/database/src/indexes/search.cpp -o CMakeFiles/database.dir/src/indexes/search.cpp.s
 
 # Object files for target database
 database_OBJECTS = \
@@ -95,7 +95,7 @@ database: CMakeFiles/database.dir/main.cpp.o
 database: CMakeFiles/database.dir/src/indexes/search.cpp.o
 database: CMakeFiles/database.dir/build.make
 database: CMakeFiles/database.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/DWL/Desktop/projects/database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable database"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pbihao/CLionProjects/database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable database"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/database.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/database.dir/clean:
 .PHONY : CMakeFiles/database.dir/clean
 
 CMakeFiles/database.dir/depend:
-	cd /Users/DWL/Desktop/projects/database/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/DWL/Desktop/projects/database /Users/DWL/Desktop/projects/database /Users/DWL/Desktop/projects/database/cmake-build-debug /Users/DWL/Desktop/projects/database/cmake-build-debug /Users/DWL/Desktop/projects/database/cmake-build-debug/CMakeFiles/database.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pbihao/CLionProjects/database/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pbihao/CLionProjects/database /home/pbihao/CLionProjects/database /home/pbihao/CLionProjects/database/cmake-build-debug /home/pbihao/CLionProjects/database/cmake-build-debug /home/pbihao/CLionProjects/database/cmake-build-debug/CMakeFiles/database.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/database.dir/depend
 
