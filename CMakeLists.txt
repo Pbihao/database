@@ -12,4 +12,4 @@ add_executable(database
         src/indexes/search.h
         src/indexes/search.cpp
         src/cache/pool.h
-        src/DB/temp.h)
+        )

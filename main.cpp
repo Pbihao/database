@@ -4,8 +4,8 @@
 #include "src/DB/book.h"
 #include "src/DB/binary_tree.h"
 #include "src/indexes/search.h"
-#include "src/DB/temp.h"
 #include "src/DB/DB.h"
+#include "src/cache/pool.h"
 #include <string>
 #include <cstdio>
 #include <iostream>
@@ -13,7 +13,7 @@
 using namespace std;
 Book a[100];
 Search_engine engine;
-DB db;
+Pool pool;
 
 
 void read(string& x){
@@ -157,22 +157,22 @@ int main(){
     }
 
     //将bookInfo的信息存到二进制文件books.dat
-    db.write_books(bookInfo);
+    pool.write_books(bookInfo);
 
     //读取二进制文件book.dat的图书信心到arry
-    db.read_books();
+    pool.read_books();
 //    cout << db.arry[0].name << db.arry[1].name << db.arry[2].name << db.arry[3].name << db.arry[4].name << db.arry[5].name <<
 //    db.arry[6].name << db.arry[7].name << db.arry[8].name << db.arry[9].name << endl;
 
     //搜索
-    engine.init(db.arry);
+    engine.init(pool.arry);
     string search_name;
     vector<int >ans;
 
     while(1) {
      read(search_name);
      engine.search(search_name, ans);
-     for (auto id: ans)cout << db.arry[id].name << endl;
+     for (auto id: ans)cout << pool.arry[id].name << endl;
     }
     return 0;
 }

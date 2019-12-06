@@ -5,7 +5,8 @@ CMakeFiles/database.dir/main.cpp.o: ../main.cpp
 CMakeFiles/database.dir/main.cpp.o: ../src/DB/DB.h
 CMakeFiles/database.dir/main.cpp.o: ../src/DB/binary_tree.h
 CMakeFiles/database.dir/main.cpp.o: ../src/DB/book.h
-CMakeFiles/database.dir/main.cpp.o: ../src/DB/temp.h
+CMakeFiles/database.dir/main.cpp.o: ../src/cache/pool.h
+CMakeFiles/database.dir/main.cpp.o: ../src/cache/temp.h
 CMakeFiles/database.dir/main.cpp.o: ../src/indexes/search.h
 
 CMakeFiles/database.dir/src/indexes/search.cpp.o: ../src/DB/book.h
