@@ -31,6 +31,12 @@ public:
         borrowing_times = Borrowing_times;
         state = NEW_BOOK;
     }
+    Book(int id, string Name){
+        ID = id;
+        name = Name;
+        borrowing_times = 0;
+        state = NEW_BOOK;
+    }
     void set_ID(int x){
         this->ID = x;
     }

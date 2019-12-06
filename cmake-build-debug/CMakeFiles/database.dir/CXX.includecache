@@ -7,24 +7,14 @@
 #IncludeRegexTransform: 
 
 /home/pbihao/CLionProjects/database/main.cpp
-src/DB/book.h
-/home/pbihao/CLionProjects/database/src/DB/book.h
-src/DB/binary_tree.h
-/home/pbihao/CLionProjects/database/src/DB/binary_tree.h
-src/indexes/search.h
-/home/pbihao/CLionProjects/database/src/indexes/search.h
-src/DB/DB.h
-/home/pbihao/CLionProjects/database/src/DB/DB.h
-src/cache/pool.h
-/home/pbihao/CLionProjects/database/src/cache/pool.h
 string
 -
 cstdio
 -
 iostream
 -
-fstream
--
+src/DB/DB.h
+/home/pbihao/CLionProjects/database/src/DB/DB.h
 
 /home/pbihao/CLionProjects/database/src/DB/DB.h
 string
@@ -41,6 +31,8 @@ binary_tree.h
 /home/pbihao/CLionProjects/database/src/indexes/search.h
 ../cache/pool.h
 /home/pbihao/CLionProjects/database/src/cache/pool.h
+../algor/sort_times.h
+/home/pbihao/CLionProjects/database/src/algor/sort_times.h
 
 /home/pbihao/CLionProjects/database/src/DB/binary_tree.h
 book.h
@@ -51,6 +43,10 @@ vector
 /home/pbihao/CLionProjects/database/src/DB/book.h
 string
 -
+
+/home/pbihao/CLionProjects/database/src/algor/sort_times.h
+../DB/DB.h
+/home/pbihao/CLionProjects/database/src/DB/DB.h
 
 /home/pbihao/CLionProjects/database/src/cache/pool.h
 string
@@ -77,10 +73,6 @@ string
 -
 cstring
 -
-
-/home/pbihao/CLionProjects/database/src/indexes/search.cpp
-search.h
-/home/pbihao/CLionProjects/database/src/indexes/search.h
 
 /home/pbihao/CLionProjects/database/src/indexes/search.h
 string
