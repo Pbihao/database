@@ -14,6 +14,7 @@
 #include "binary_tree.h"
 #include "../indexes/search.h"
 #include "temp.h"
+#include "../cache/pool.h"
 using namespace std;
 
 class DB {
@@ -22,6 +23,7 @@ public:
     vector<Book> arry;
     Binary_tree binaryTree;
     Search_engine searchEngine;
+    Pool pool;
 
     /*
      * 将books中的所有信息写入二进制文件books.dat
@@ -33,6 +35,14 @@ public:
      * */
     void read_books();
 
+    //接下来就是直接和用户之间的交接
+
+    //加入一个书本的集合
+    void init(const vector<Book>& books){
+        for(const auto& x: books){
+
+        }
+    }
 };
 
 void DB::write_books(vector<Book>& books){
