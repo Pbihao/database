@@ -36,7 +36,7 @@ int main(){
     vector<Book>arry;
     for(int i = 0; i <= 9; i++)arry.push_back(a[i]);
     engine.init(arry);
-    int op, ID;
+    int op, ID = 9;
     string name;
     Book book;
     vector<int >ans;
@@ -44,7 +44,7 @@ int main(){
         scanf("%d", &op);getchar();
         if(op == 0){
             read(name);
-            cin>>ID;getchar();
+            ID++;
             book = Book(ID, name, "pbihao", 1);
             a[ID] = book;
             engine.insert(book);
