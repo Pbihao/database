@@ -6,16 +6,19 @@
 
 
 void pre_string_process(string title, vector<string>& words){
+    /*统一书名的格式*/
     string tmp;
     words.clear();
     for(auto x: title){
         if(x >= 'A' && x <= 'Z')x = x - 'A' + 'a';
+        /*将大写字母转换为小写字母*/
         if((x >= 'a' && x <= 'z') || x == '-' || x == '\'' || x == ',' || (x >= '0' && x <= 9))tmp.push_back(x);
         else{
             if(tmp.empty())continue;
             words.push_back(tmp);
             tmp.clear();
         }
+        /*剔除无用字符*/
     }
     if(!tmp.empty())words.push_back(tmp);
 }
@@ -24,6 +27,7 @@ bool cmp(const pair<int, int>& a, const pair<int, int>& b){
 }
 
 void Search_engine::init(vector<Book>& books_name){
+    /*搜索引擎初始化*/
     dictionary.clear();
     vector<string>tmp;
     for(int i = 0; i < books_name.size(); i++){
@@ -36,6 +40,7 @@ void Search_engine::init(vector<Book>& books_name){
 }
 
 void Search_engine::insert(Book book){
+    /*搜索引擎插入一本书*/
     vector<string>tmp;
     pre_string_process(book.get_name(), tmp);
     for(auto x: tmp){
@@ -44,6 +49,7 @@ void Search_engine::insert(Book book){
 }
 
 void Search_engine::erase(Book book){
+    /*搜索引擎删除一本书*/
     vector<string> tmp;
     pre_string_process(book.get_name(), tmp);
     for(auto x: tmp){
@@ -52,6 +58,7 @@ void Search_engine::erase(Book book){
 }
 
 void Search_engine::search(string title, vector<int>& arry){
+    /*搜索引擎查找一本书*/
     vector<string> words;
     pre_string_process(title, words);
     map<int, int>count;
@@ -75,6 +82,7 @@ void Search_engine::search(string title, vector<int>& arry){
 }
 
 void Dictionary::clear() {
+    /*清空字典树*/
     if(!rt)
         return;
     queue<Dictionary::node*>q;
@@ -89,6 +97,7 @@ void Dictionary::clear() {
     }
 }
 void Dictionary::insert(string word, int book_id) {
+    /*插入一本书到字典树中*/
     if(rt == NULL)rt = new node();
     node* now = rt;
     for(const auto& x:word){
@@ -100,6 +109,7 @@ void Dictionary::insert(string word, int book_id) {
 }
 
 void Dictionary::find(string word, vector<int>&arry){
+    /*查找字典树中的一本书*/
     node* now = rt;
     arry.clear();
     if(!now)return;
@@ -114,6 +124,7 @@ void Dictionary::find(string word, vector<int>&arry){
 }
 
 void Dictionary::erase(string word, int book_id) {
+    /*删除字典树中的一本书*/
     stack<pair<node*, char> >s;
     node* now = rt;
     if(!now)return;
