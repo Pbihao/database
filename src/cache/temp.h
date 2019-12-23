@@ -7,9 +7,9 @@
 
 #include <string>
 #include <cstring>
-#define NEW_BOOK 0
-#define EDIT_BOOK 1
+#define NEW_BOOK 1
 #define DEL_BOOK 2
+#define EDIT_BOOK 3
 #define DONT_CHANGE 3
 #define ERROR -1
 using namespace std;

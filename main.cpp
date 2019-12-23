@@ -12,6 +12,7 @@
 #define FIND_BY_ID 4
 #define SEARCH 5
 #define FIND_MAX_BORROWED 6
+#define SHOW_BOOK_INFO 7
 using namespace std;
 Book book[12];
 DB db_manager;
@@ -26,13 +27,13 @@ int main(){
     vector<Book>arry;
     for(int i = 0; i <= 5; i++)arry.push_back(book[i]);
     db_manager.insert_books(arry);
-    int op, ID, now_ID = 5;
+    int op, ID, now_ID = 6;
     string name;
     while(true){
         cin>>op;
         if(op == INSERT){//1
             cin>>name;
-            db_manager.insert(Book(now_ID, name));
+            db_manager.insert(Book(now_ID++, name));
         }else if(op == UPDATE){//2
             cin>>ID>>name;
             db_manager.update(Book(ID, name));
@@ -53,7 +54,13 @@ int main(){
             for(auto book:db_manager.arry){
                 cout<<book.name<<endl;
             }
+        }else if(op == SHOW_BOOK_INFO){//7
+            db_manager.show_book_info();
+            for(auto book:db_manager.arry){
+                cout<<book.name<<endl;
+            }
         }
+        cin.sync();
     }
     return 0;
 }
