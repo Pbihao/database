@@ -32,6 +32,12 @@ public:
     /*将要更新信息的书放入队列里*/
     void update(Book book);
 
+    /*当系统关闭时，对队列中的书进行操作，无论队列是否满*/
+    void quit();
+
+    /*获得数据库最大id*/
+    int readid();
+
 };
 
 void Pool::write_books(vector<Book>& books){
@@ -81,5 +87,13 @@ void Pool::update(Book book){
         operation.io_file_operation(queue);
     }
 
+}
+
+void Pool::quit(){
+    operation.io_file_operation(queue);
+}
+
+int Pool::readid() {
+    operation.io_readid();
 }
 #endif //DATABASE_DB_H

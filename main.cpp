@@ -13,26 +13,26 @@
 #define SEARCH 5
 #define FIND_MAX_BORROWED 6
 #define SHOW_BOOK_INFO 7
+#define QUIT 8
 using namespace std;
 Book book[12];
 DB db_manager;
 
 int main(){
-    book[0] = Book(0, "I just want to kill myself!", "pbihao", 190);
-    book[1] = Book(1, "Save me now!", "pbihao", 10);
-    book[2] = Book(2, "Angry Coward? It's funny", "pbihao", 0);
-    book[3] = Book(3, "Don't Save The Bad Man", "pbihao", 19);
-    book[4] = Book(4, "Bad but beautiful", "pbihao", 9);
-    book[5] = Book(5, "An angry man", "pbihao", 19);
     vector<Book>arry;
-    for(int i = 0; i <= 5; i++)arry.push_back(book[i]);
-    db_manager.insert_books(arry);
-    int op, ID, now_ID = 6;
+    int op, ID, now_ID = db_manager.pool.readid() + 1;
     string name;
-    while(true){
+    while(true)
+    {
         cin>>op;
         if(op == INSERT){//1
-            cin>>name;
+            name.clear();
+            char c = getchar();
+            while(c == ' ' || c == '\n')c = getchar();
+            while(c != '\n'){
+                name.push_back(c);
+                c = getchar();
+            }
             db_manager.insert(Book(now_ID++, name));
         }else if(op == UPDATE){//2
             cin>>ID>>name;
@@ -54,13 +54,28 @@ int main(){
             for(auto book:db_manager.arry){
                 cout<<book.name<<endl;
             }
-        }else if(op == SHOW_BOOK_INFO){//7
+        }else if(op == SHOW_BOOK_INFO)
+        {//7
             db_manager.show_book_info();
-            for(auto book:db_manager.arry){
-                cout<<book.name<<endl;
+            for(auto book:db_manager.arry)
+            {
+                cout<<book.name<<" "<< book.get_ID() <<endl;
             }
+        }
+        else if(op == QUIT)
+        {//8
+            db_manager.quit();
+            break;
         }
         cin.sync();
     }
     return 0;
 }
+/*
+I just want to kill myself! 0
+Save me now! 1
+hello 2
+Don't Save The Bad Man 3
+Bad but beautiful 4
+An angry man 5
+ * */

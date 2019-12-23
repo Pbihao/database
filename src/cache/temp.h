@@ -13,7 +13,9 @@
 #define DONT_CHANGE 3
 #define ERROR -1
 using namespace std;
-
+/*
+ * 将所有对于书籍的操作封装起来的一个信息类
+ */
 class Temp {
 public:
     int ID;

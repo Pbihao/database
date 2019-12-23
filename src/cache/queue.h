@@ -36,8 +36,9 @@ public:
     /*从队列首部删除一个结点*/
     void DeQueue(LinkQueue &Q, Book &e);
 
-    /*销毁一个队列*/
-    void DestroyQueue(LinkQueue &Q);
+
+
+
 
     /*判断队列是否满，满则返回1*/
     int IsEnough(LinkQueue &Q);
@@ -83,16 +84,6 @@ void Queue::DeQueue(LinkQueue &Q, Book &e){
     if(Q.rear == p) //如果删除的元素即为尾结点，则将头指针赋予尾指针，一同指向头
         Q.rear = Q.front;
     delete p;
-}
-
-/*销毁一个队列*/
-void Queue::DestroyQueue(LinkQueue &Q){
-    while (Q.front){ //从头结点开始一个个删除队列结点，释放空间
-        Q.rear = Q.front;
-        delete Q.front;
-        Q.front = Q.rear;
-    }
-    Q.queue_size = 0;
 }
 
 /*判断队列是否满*/

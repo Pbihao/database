@@ -26,6 +26,9 @@ public:
 
     /*打开二进制文件books.dat进行图书的增删改操作*/
     void io_file_operation(Queue queue);
+
+    /*获得数据库最大id*/
+    int io_readid();
 };
 
 
@@ -190,5 +193,13 @@ void Fileio::io_read_books(vector<Book>& books){
     inFile.close();
 }
 
+int Fileio::io_readid() {
+    int book_size;
+    ifstream inFile("books.dat", ios::in|ios::binary);
+    inFile.seekg(0, ios::end);//将文件读指针移到末尾
+    book_size = inFile.tellg()/ sizeof(Temp);//计算书的数量
+    inFile.close();
+    return book_size-1;
+}
 
 #endif //DATABASE_FILEIO_H

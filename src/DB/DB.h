@@ -17,12 +17,24 @@ using namespace std;
 
 class DB {
 public:
-    int size;
+    int size, now_ID;
     vector<Book> arry;
     vector<int> arry_ID;
     Binary_tree binaryTree;
     Search_engine searchEngine;
     Pool pool;
+
+    DB(){
+        arry.clear();
+        pool.read_books(arry);
+        for(auto book: arry){
+            binaryTree.insert(book);
+            searchEngine.insert(book);
+            size++;
+        }
+
+
+    }
 
     //向数据库加入很多本书
     void insert_books(vector<Book>& books);
@@ -47,14 +59,18 @@ public:
 
     //从展示数据库的所有图书信息
     void show_book_info();
+
+    //关闭数据库
+    void quit();
+
 };
 
 void DB::insert_books(vector<Book>& books){
-        pool.write_books(books);
         for(const auto& book: books){
             binaryTree.insert(book);
             searchEngine.insert(book);
             size++;
+            pool.insert(book);
         }
 };
 
@@ -97,6 +113,11 @@ void DB::find_max_borrowed() {
 }
 
 void DB::show_book_info(){
-    pool.read_books(arry);
+    //pool.read_books(arry);
+    binaryTree.run(arry);
+}
+
+void DB::quit() {
+    pool.quit();
 }
 #endif //DATABASE_DB_H
