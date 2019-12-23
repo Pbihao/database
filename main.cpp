@@ -33,7 +33,7 @@ int main(){
         cin>>op;
         if(op == INSERT){//1
             cin>>name;
-            db_manager.insert(Book(now_ID, name));
+            db_manager.insert(Book(now_ID++, name));
         }else if(op == UPDATE){//2
             cin>>ID>>name;
             db_manager.update(Book(ID, name));
@@ -60,6 +60,7 @@ int main(){
                 cout<<book.name<<endl;
             }
         }
+        cin.sync();
     }
     return 0;
 }
