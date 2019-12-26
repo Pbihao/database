@@ -6,6 +6,7 @@
 #define DATABASE_BOOK_H
 
 #include <string>
+#include <cstdio>
 #define NEW_BOOK 1
 #define DEL_BOOK 2
 #define EDIT_BOOK 3
@@ -34,7 +35,7 @@ public:
     Book(int id, string Name){
         ID = id;
         name = Name;
-        borrowing_times = 0;
+        borrowing_times = rand() % 100;
         state = NEW_BOOK;
     }
 
