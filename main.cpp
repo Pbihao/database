@@ -20,12 +20,27 @@ DB db_manager;
 
 int main(){
     vector<Book>arry;
-    int op, ID, now_ID = db_manager.pool.readid() + 1;
+    int op, ID, now_ID = db_manager.readid();
     string name;
     while(true)
     {
         cin>>op;
-        if(op == INSERT){//1
+        if(op == 0){
+            Book bookinit;
+            bookinit.set_ID(0);
+            bookinit.name = "I just want to kill myself!";
+            arry.push_back(bookinit);
+            bookinit.set_ID(1);
+            bookinit.name = "Save me now!";
+            arry.push_back(bookinit);
+            bookinit.set_ID(2);
+            bookinit.name = "Don't Save The Bad Man";
+            arry.push_back(bookinit);
+            bookinit.set_ID(3);
+            bookinit.name = "Bad but beautiful";
+            arry.push_back(bookinit);
+            db_manager.pool.write_books(arry);
+        }else if(op == INSERT){//1
             name.clear();
             char c = getchar();
             while(c == ' ' || c == '\n')c = getchar();

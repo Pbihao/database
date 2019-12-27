@@ -63,6 +63,8 @@ public:
     //关闭数据库
     void quit();
 
+    int readid();
+
 };
 
 void DB::insert_books(vector<Book>& books){
@@ -119,5 +121,9 @@ void DB::show_book_info(){
 
 void DB::quit() {
     pool.quit();
+}
+
+int DB::readid(){
+    return arry.size();
 }
 #endif //DATABASE_DB_H

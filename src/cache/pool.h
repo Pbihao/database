@@ -36,7 +36,7 @@ public:
     void quit();
 
     /*获得数据库最大id*/
-    int readid();
+    int readlength();
 
 };
 
@@ -53,7 +53,6 @@ void Pool::insert(Book book){
     if(queue.IsEmpty(queue.books)){
         queue.InitQueue(queue.books);
         queue.EnQueue(queue.books, book);
-
     }else{
         queue.EnQueue(queue.books, book);
     }
@@ -93,7 +92,7 @@ void Pool::quit(){
     operation.io_file_operation(queue);
 }
 
-int Pool::readid() {
-    operation.io_readid();
+int Pool::readlength() {
+    return operation.io_readid();
 }
 #endif //DATABASE_DB_H

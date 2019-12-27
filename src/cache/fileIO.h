@@ -37,11 +37,12 @@ void Fileio::io_file_operation(Queue queue){
     Book book;
     Temp temp;
     Temp temp_find;
+    int size = queue.books.queue_size;
     fstream ioFile("books.dat", ios::in|ios::out);//用既读又写的方式打开文件
     if(!ioFile){
         cout << "error" << endl;//文件打开错误
     }
-    for(i=0;i<queue.books.queue_size;i++){
+    for(i=0;i<size;i++){
 
         queue.DeQueue(queue.books, book);//从队列里取出一本书
 
