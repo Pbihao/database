@@ -200,7 +200,7 @@ int Fileio::io_readid() {
     inFile.seekg(0, ios::end);//将文件读指针移到末尾
     book_size = inFile.tellg()/ sizeof(Temp);//计算书的数量
     inFile.close();
-    return book_size-1;
+    return book_size;
 }
 
 #endif //DATABASE_FILEIO_H

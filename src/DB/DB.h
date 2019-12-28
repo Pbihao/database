@@ -124,6 +124,6 @@ void DB::quit() {
 }
 
 int DB::readid(){
-    return arry.size();
+    return pool.readlength();
 }
 #endif //DATABASE_DB_H
